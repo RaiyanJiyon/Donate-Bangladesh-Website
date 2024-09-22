@@ -10,31 +10,31 @@ No Feedback Posting: Do not post assignment feedback after receiving it. If you 
 Meaningful Content: Avoid using "lorem ipsum" text. Instead, use relevant and meaningful content.
 Visual Appeal: Feel free to modify the color or design, but ensure the design is visually appealing and professional.
 No JavaScript Libraries or Frameworks: You are not allowed to use any JavaScript library or framework for this assignment.
+
 Design:
 
 Navbar:
-
 Create a visually appealing navbar with the following structure: 
-Logo: Positioned in the middle.
-"Blog" Button: On the left.
-Account Balance: Displayed on the right, with a coin icon.
-"Donation" and "History" Buttons: Centered (as per Figma).
+Logo: Positioned in the middle. ✔️
+"Blog" Button: On the left. ✔️
+Account Balance: Displayed on the right, with a coin icon. ✔️
+"Donation" and "History" Buttons: Centered (as per Figma). ✔️
+
 Donation Cards:
-
 Create 3 donation cards with the following details:
-Image: On the left.
-Donation Title: Clear and descriptive.
-Donation Info: Brief description of the cause.
-Current Donation Amount: Displayed prominently.
-Input Field: For entering donation amount.
-"Donate Now" Button: For submitting the donation.
-History Section:
+Image: On the left. ✔️
+Donation Title: Clear and descriptive. ✔️
+Donation Info: Brief description of the cause. ✔️
+Current Donation Amount: Displayed prominently. ✔️
+Input Field: For entering donation amount. ✔️
+"Donate Now" Button: For submitting the donation. ✔️
 
-Initially hidden and empty.
+History Section:
+Initially hidden and empty. 
+
 Functionalities:
 
 Donation and History Button Functionality:
-
 "History" Button: Clicking this button will hide the donation cards and display the history section.
 "Donation" Button: Clicking this button will hide the history section and display the donation cards.
 Donation Functionality for Each Card:

@@ -11,7 +11,7 @@ function getTextElementValueAsNumber(id) {
 }
 
 
-function donationManagement(buttonId, donationInputId, currentDonationId, totalAmountId) {
+function donationManagement(buttonId, donationInputId, currentDonationId, totalAmountId, historySection, headingId) {
     document.getElementById(buttonId).addEventListener('click', function () {
         const donateAmount = getInputElementValueAsNumber(donationInputId);
         let currentAmount = getTextElementValueAsNumber(currentDonationId);
@@ -34,5 +34,24 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
 
         totalAmount -= donateAmount;
         document.getElementById(totalAmountId).innerText = totalAmount;
+
+        let title = document.getElementById(headingId).textContent;
+
+        let history = document.getElementById('history-section');
+        let newHistory = document.createElement('div');
+        newHistory.innerHTML = `
+            <div class="flex flex-col p-5 bg-white border border-border-color rounded-2xl">
+                <h3 class="text-lg font-bold">
+                    ${donateAmount} Taka is ${title}
+                </h3>
+                <p id="history-date" class="text-sm md:text-base text-paragraph-color">
+                </p>
+            </div>
+            `
+
+        history.appendChild(newHistory);
+
+        const currentDate = new Date();
+        newHistory.querySelector("#history-date").innerText = "Date: " + currentDate.toString();
     });
 }

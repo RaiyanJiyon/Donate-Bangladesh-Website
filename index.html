@@ -37,37 +37,39 @@
 </head>
 
 <body class="font-lexand m-0 p-0">
-    <header class="sticky z-10 w-full navbar-color bg-background-color pb-6 top-0 border border-transparent">
+    <header class="sticky z-10 w-full navbar-color pb-6 top-0 bg-background-color border border-transparent">
         <!-- navbar -->
-        <div class="navbar w-11/12 mx-auto mt-4">
-            <div class="navbar-start">
-                <a id="blog-btn" class="btn bg-primary-color">Blog</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <div class="flex justify-center items-center gap-2">
-                    <div>
-                        <img src="assets/logo.png" alt="coin logo" class="w-3/4">
-                    </div>
-                    <p class="md:text-lg">Donate Bangladesh</p>
+        <div class="w-full pb-4">
+            <div class="navbar w-11/12 mx-auto">
+                <div class="navbar-start">
+                    <a id="blog-btn" class="btn bg-primary-color">Blog</a>
                 </div>
-            </div>
-            <div class="navbar-end">
-                <div class="flex justify-center items-center">
-                    <div>
-                        <img src="assets/coin.png" alt="coin image" class="w-3/4">
+                <div class="navbar-center hidden lg:flex">
+                    <div class="flex justify-center items-center gap-2">
+                        <div>
+                            <img src="assets/logo.png" alt="coin logo" class="w-3/4">
+                        </div>
+                        <p class="md:text-lg">Donate Bangladesh</p>
                     </div>
-                    <p class="md:text-lg"><span id="total-amount">5500</span> BDT</p>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <img src="assets/coin.png" alt="coin image" class="w-3/4">
+                        </div>
+                        <p class="md:text-lg"><span id="total-amount">5500</span> BDT</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-    <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
+
         <!-- buttons -->
-        <div class="flex justify-center items-center gap-4">
+        <div class="flex justify-center items-center gap-4 mt-6">
             <button id="donation-btn" class="btn bg-primary-color">Donation</button>
             <button id="history-btn" class="btn bg-white">History</button>
         </div>
-
+    </header>
+    <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
         <section id="card-section" class="mt-8">
             <!-- card 1 -->
             <div class="hero border border-border-color rounded-2xl overflow-hidden">
@@ -161,7 +163,8 @@
                         </p>
                         <input id="protest-donate-amount" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered input-md w-full" />
-                        <button id="protest-donate-btn" class="btn w-full bg-primary-color text-lg font-bold mt-4">Donate Now</button>
+                        <button id="protest-donate-btn"
+                            class="btn w-full bg-primary-color text-lg font-bold mt-4">Donate Now</button>
                     </div>
                 </div>
             </div>

@@ -21,8 +21,9 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
             alert('Invalid Donation Amount');
             return;
         }
-
+        
         if (donateAmount > totalAmount) {
+            document.getElementById(donationInputId).value = '';
             alert("You don't have sufficient balance");
             return;
         }

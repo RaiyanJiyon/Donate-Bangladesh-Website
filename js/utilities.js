@@ -37,7 +37,7 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
 
         let title = document.getElementById(headingId).textContent;
 
-        let history = document.getElementById('history-section');
+        let history = document.getElementById(historySection);
         let newHistory = document.createElement('div');
         newHistory.innerHTML = `
             <div class="flex flex-col p-5 bg-white border border-border-color rounded-2xl">
@@ -53,5 +53,8 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
 
         const currentDate = new Date();
         newHistory.querySelector("#history-date").innerText = "Date: " + currentDate.toString();
+
+        const modal = document.getElementById('my_modal_1');
+        modal.showModal();
     });
 }

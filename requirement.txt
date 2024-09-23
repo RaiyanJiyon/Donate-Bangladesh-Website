@@ -35,7 +35,7 @@ Initially hidden and empty. ✔️
 Functionalities:
 
 Donation and History Button Functionality:
-"History" Button: Clicking this button will hide the donation cards and display the history section.
+"History" Button: Clicking this button will hide the donation cards and display the history section. ✔️
 "Donation" Button: Clicking this button will hide the history section and display the donation cards.
 Donation Functionality for Each Card:
 

@@ -37,7 +37,7 @@
 </head>
 
 <body class="font-lexand m-0 p-0">
-    <header class="fixed z-10 w-full navbar-color bg-background-color pb-6 top-0">
+    <header class="sticky z-10 w-full navbar-color bg-background-color pb-6 top-0 border border-transparent">
         <!-- navbar -->
         <div class="navbar w-11/12 mx-auto mt-4">
             <div class="navbar-start">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </header>
-    <main class="bg-white mt-36 mb-10 md:mb-20 w-11/12 mx-auto">
+    <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
         <!-- buttons -->
         <div class="flex justify-center items-center gap-4">
             <button id="donation-btn" class="btn bg-primary-color">Donation</button>
@@ -171,7 +171,6 @@
         <section id="history-section" class="hidden mt-8 space-y-4">
         </section>
 
-
         <!-- modal code -->
         <dialog id="my_modal_1" class="modal">
             <div class="modal-box">
@@ -184,7 +183,6 @@
                 <div class="modal-action flex justify-center">
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <button class="btn">close confirmation</button>
                         </form>
                     </div>
@@ -197,7 +195,6 @@
     <script src="./js/index.js"></script>
     <script src="./js/blog.js"></script>
     <script src="./js/toggle-button.js"></script>
-
 </body>
 
 </html>

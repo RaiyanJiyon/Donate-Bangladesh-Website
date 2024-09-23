@@ -37,9 +37,9 @@
 </head>
 
 <body class="font-lexand background-color">
-    <header class="navbar-color">
+    <header class="sticky z-10 w-full navbar-color bg-background-color pb-6 top-0 border border-transparent">
         <!-- navbar -->
-        <div class="navbar bg-base-100 w-11/12 mx-auto">
+        <div class="navbar w-11/12 mx-auto mt-4">
             <div class="navbar-start">
                 <a id="home-btn" class="btn bg-primary-color">Home</a>
             </div>
@@ -103,7 +103,9 @@
                 </div>
                 <div class="collapse-content">
                     <p>
-                        Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.
+                        Event delegation refers to the process of using event propagation (bubbling) to handle events at
+                        a higher level in the DOM than the element on which the event originated. It allows us to attach
+                        a single event listener for elements that exist now or in the future.
                     </p>
                 </div>
             </div>
@@ -114,7 +116,8 @@
                 </div>
                 <div class="collapse-content">
                     <p>
-                        Manipulating the DOM seems complex in theory, but as you’ll see in this article, there are a few methods that you’ll use over and over again in many scenarios.
+                        Manipulating the DOM seems complex in theory, but as you’ll see in this article, there are a few
+                        methods that you’ll use over and over again in many scenarios.
                     </p>
                 </div>
             </div>
@@ -124,7 +127,7 @@
     <footer></footer>
 
     <script>
-        document.getElementById('home-btn').addEventListener('click', function() {
+        document.getElementById('home-btn').addEventListener('click', function () {
             window.location.href = "index.html";
         });
     </script>

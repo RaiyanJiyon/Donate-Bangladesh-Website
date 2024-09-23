@@ -17,7 +17,8 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
         let currentAmount = getTextElementValueAsNumber(currentDonationId);
         let totalAmount = getTextElementValueAsNumber(totalAmountId);
 
-        if (isNaN(donateAmount) || donateAmount < 0) {
+        if (isNaN(donateAmount) || donateAmount <= 0) {
+            document.getElementById(donationInputId).value = '';
             alert('Invalid Donation Amount');
             return;
         }

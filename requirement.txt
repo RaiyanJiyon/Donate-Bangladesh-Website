@@ -19,6 +19,7 @@ Account Balance: Displayed on the right, with a coin icon. ✔️
 "Donation" and "History" Buttons: Centered (as per Figma). ✔️
 
 Donation Cards:
+
 Create 3 donation cards with the following details:
 Image: On the left. ✔️
 Donation Title: Clear and descriptive. ✔️
@@ -31,11 +32,13 @@ History Section:
 Initially hidden and empty. ✔️
 
 Functionalities:
+
 Donation and History Button Functionality:
 "History" Button: Clicking this button will hide the donation cards and display the history section. ✔️
 "Donation" Button: Clicking this button will hide the history section and display the donation cards. ✔️
 
 Donation Functionality for Each Card:
+
 "Donate Now" Button Click:
 The donation input amount will be deducted from the total account balance, and the updated balance will be shown. ✔️
 The card's current donation amount will increase. ✔️
@@ -46,10 +49,11 @@ Display an alert if invalid data is found and stop the transaction. ✔️
 
 Validate the donation amount:
 If the donation amount is greater than the account balance. ✔️
-If the input field contains an invalid number. ❌
+If the input field contains an invalid number. ✔️
 If the input field is empty. ✔️
 
 History Section:
+
 The history section will display transaction notifications, including:
 Date and time of the transaction. ✔️
 Donation amount. ✔️

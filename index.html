@@ -37,9 +37,10 @@
 </head>
 
 <body class="font-lexand m-0 p-0">
+    <!-- header container starts here -->
     <header class="sticky z-10 w-full navbar-color pb-6 top-0 bg-background-color border border-transparent">
         <!-- navbar -->
-        <div class="w-full pb-4">
+        <div class="w-full pb-4 mt-4">
             <div class="navbar w-11/12 mx-auto">
                 <div class="navbar-start">
                     <a id="blog-btn" class="btn bg-primary-color">Blog</a>
@@ -63,13 +64,17 @@
             </div>
         </div>
 
-        <!-- buttons -->
+        <!-- donation and history buttons -->
         <div class="flex justify-center items-center gap-4 mt-6">
             <button id="donation-btn" class="btn bg-primary-color">Donation</button>
             <button id="history-btn" class="btn bg-white">History</button>
         </div>
     </header>
+    <!-- header container ends here -->
+
+    <!-- main container starts here -->
     <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
+        <!-- donation cards -->
         <section id="card-section" class="mt-8">
             <!-- card 1 -->
             <div class="hero border border-border-color rounded-2xl overflow-hidden">
@@ -192,12 +197,24 @@
                 </div>
         </dialog>
     </main>
-    <footer></footer>
+    <!-- main container ends here -->
 
+    <!-- footer container starts here -->
+    <footer></footer>
+    <!-- footer container ends here -->
+
+    <!-- External JavaScript file -->
     <script src="./js/utilities.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/blog.js"></script>
     <script src="./js/toggle-button.js"></script>
+
+    <!-- Internal JavaScript for redirect to blog.html page -->
+    <script>
+        document.getElementById('blog-btn')
+            .addEventListener('click', function () {
+                window.location.href = "blog.html";
+            });
+    </script>
 </body>
 
 </html>

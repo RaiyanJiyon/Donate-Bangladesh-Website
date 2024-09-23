@@ -1,49 +1,52 @@
-function getInputElementValueAsNumber(id) {
-    const inputElementValue = document.getElementById(id).value;
-    const inputValueAsNumber = parseFloat(inputElementValue);
+// user-build function for input field data
+function getInputAsNumber(id) {
+    const inputValue = document.getElementById(id).value;
+    const inputValueAsNumber = Number(inputValue);
     return inputValueAsNumber;
 }
 
-function getTextElementValueAsNumber(id) {
-    const textElementValue = document.getElementById(id).innerText;
-    const textValueAsNumber = parseFloat(textElementValue);
+// user-build function for text field data
+function getTextAsNumber(id) {
+    const textValue = document.getElementById(id).innerText;
+    const textValueAsNumber = Number(textValue);
     return textValueAsNumber;
 }
 
-function donationManagement(buttonId, donationInputId, currentDonationId, totalAmountId, historySection, headingId) {
+// user-build function for donation cards
+function donationHandle(buttonId, donationInputNumberId, totalDonationId, totalAmountId, historySection, titleId) {
     document.getElementById(buttonId).addEventListener('click', function () {
-        const donateAmount = getInputElementValueAsNumber(donationInputId);
-        let currentAmount = getTextElementValueAsNumber(currentDonationId);
-        let totalAmount = getTextElementValueAsNumber(totalAmountId);
+        let donateAmount = getInputAsNumber(donationInputNumberId);
+        let currentDonationAmount = getTextAsNumber(totalDonationId);
+        let totalAmount = getTextAsNumber(totalAmountId);
 
         if (isNaN(donateAmount) || donateAmount <= 0) {
-            document.getElementById(donationInputId).value = '';
+            document.getElementById(donationInputNumberId).value = '';
             alert('Invalid Donation Amount');
             return;
         }
-        
+
         if (donateAmount > totalAmount) {
-            document.getElementById(donationInputId).value = '';
+            document.getElementById(donationInputNumberId).value = '';
             alert("You don't have sufficient balance");
             return;
         }
 
-        currentAmount += donateAmount;
-        document.getElementById(currentDonationId).innerText = currentAmount;
-
-        document.getElementById(donationInputId).value = '';
+        currentDonationAmount += donateAmount;
+        document.getElementById(totalDonationId).innerText = currentDonationAmount.toFixed(2);
+        document.getElementById(donationInputNumberId).value = '';
 
         totalAmount -= donateAmount;
-        document.getElementById(totalAmountId).innerText = totalAmount;
+        document.getElementById(totalAmountId).innerText = totalAmount.toFixed(2);
 
-        let title = document.getElementById(headingId).textContent;
+        let title = document.getElementById(titleId).textContent;
 
         let history = document.getElementById(historySection);
         let newHistory = document.createElement('div');
+
         newHistory.innerHTML = `
             <div class="flex flex-col p-5 bg-white border border-border-color rounded-2xl">
                 <h3 class="text-lg font-bold">
-                    ${donateAmount} Taka is ${title}
+                    ${donateAmount.toFixed(2)} Taka is ${title}
                 </h3>
                 <p id="history-date" class="text-sm md:text-base text-paragraph-color">
                 </p>
@@ -52,10 +55,10 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
 
         history.insertBefore(newHistory, history.firstChild);
 
-        const currentDate = new Date();
-        newHistory.querySelector("#history-date").innerText = "Date: " + currentDate.toString();
+        const date = new Date();
+        newHistory.querySelector("#history-date").innerText = "Date: " + date.toString();
 
-        const modal = document.getElementById('my_modal_1');
-        modal.showModal();
+        const displayModal = document.getElementById('my_modal_1');
+        displayModal.showModal();
     });
-}
+};

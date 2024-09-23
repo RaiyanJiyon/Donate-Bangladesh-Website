@@ -1,8 +1,6 @@
 const donationButton = document.getElementById('donation-btn');
 const historyButton = document.getElementById('history-btn');
 
-
-
 historyButton.addEventListener('click', function () {
     historyButton.classList.add('bg-primary-color');
     historyButton.classList.remove('bg-white');

@@ -10,7 +10,6 @@ function getTextElementValueAsNumber(id) {
     return textValueAsNumber;
 }
 
-
 function donationManagement(buttonId, donationInputId, currentDonationId, totalAmountId, historySection, headingId) {
     document.getElementById(buttonId).addEventListener('click', function () {
         const donateAmount = getInputElementValueAsNumber(donationInputId);
@@ -50,7 +49,7 @@ function donationManagement(buttonId, donationInputId, currentDonationId, totalA
             </div>
             `
 
-        history.appendChild(newHistory);
+        history.insertBefore(newHistory, history.firstChild);
 
         const currentDate = new Date();
         newHistory.querySelector("#history-date").innerText = "Date: " + currentDate.toString();

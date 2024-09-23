@@ -58,7 +58,7 @@ Donation name. ✔️
 Challenges:
 
 Sticky Navbar:
-Make the navbar sticky to the top of the page. ❌
+Make the navbar sticky to the top of the page. ✔️
 
 Blog Page:
 Create a blog.html file and link it to the main page. ✔️

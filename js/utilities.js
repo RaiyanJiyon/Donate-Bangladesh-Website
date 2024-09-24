@@ -1,18 +1,15 @@
-// user-build function for input field data
 function getInputAsNumber(id) {
     const inputValue = document.getElementById(id).value;
     const inputValueAsNumber = Number(inputValue);
     return inputValueAsNumber;
 }
 
-// user-build function for text field data
 function getTextAsNumber(id) {
     const textValue = document.getElementById(id).innerText;
     const textValueAsNumber = Number(textValue);
     return textValueAsNumber;
 }
 
-// user-build function for donation cards
 function donationHandle(buttonId, donationInputNumberId, totalDonationId, totalAmountId, historySection, titleId) {
     document.getElementById(buttonId).addEventListener('click', function () {
         let donateAmount = getInputAsNumber(donationInputNumberId);
@@ -62,3 +59,16 @@ function donationHandle(buttonId, donationInputNumberId, totalDonationId, totalA
         displayModal.showModal();
     });
 };
+
+
+const siteHeader = document.getElementById('header');
+
+function scrollHeaderStyle() {
+    if (window.scrollY > 50) {
+        siteHeader.classList.add('backdrop-blur-lg', 'bg-white/30')
+    } else {
+        siteHeader.classList.remove('backdrop-blur-lg', 'bg-white/30')
+    };
+}
+
+window.addEventListener('scroll', scrollHeaderStyle);
